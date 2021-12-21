@@ -5,7 +5,7 @@ let worldgen = new FastNoiseLite();
 // --->  CONFIGURATION
 
 // the total size of the world (width)
-const worldSize = prompt("World Size (Ideally 100-1000): ");
+const worldSize = prompt("World Size (Max 1000): ");
 // polygon debug
 const wireframeEnabled = false;
 // world height multiplier
