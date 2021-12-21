@@ -1,0 +1,61 @@
+html, body {
+  font-family: Trebuchet MS;
+	overflow: hidden;
+	user-select: none;
+  padding: 0;
+  margin: 0;
+}
+
+canvas {
+	width: 100%; 
+	height: 100%;
+	padding: 0;
+}
+
+#hotbar {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+}
+
+.hotbar-element {
+  display: inline;
+  background: rgba(255, 255, 255, 0.5);
+  color: black;
+  border: 5px solid rgba(128, 128, 128, 0.5);
+  padding: 5px;
+  margin: 5px;
+}
+
+#debugWarning {
+  visibility: hidden;
+  color: maroon;
+  position: absolute;
+  top: 30px;
+  left: 6px;
+}
+
+#debugWarning code {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+#controls-help {
+  position: absolute;
+  right: 0;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+#controls-help p {
+  display: block;
+}
+
+#controls-help code {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+#coords {
+  position: absolute;
+  left: 0;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.15);
+}

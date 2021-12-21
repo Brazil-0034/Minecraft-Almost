@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Three.js app</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!-- Game UI Elements -->
+    <div id="debugWarning">
+      Warning: Debug Mode is enabled. Press <code>&nbsp;F&nbsp;</code> to disable it.
+    </div>
+    <div id="coords">
+      Coords: Loading...
+    </div>
+    <div id="chat">
+      
+    </div>
+    <div id="hotbar">
+      <div class="hotbar-element">[1] GRASS</div>
+      <div class="hotbar-element">
+        S
+      </div>
+      <div class="hotbar-element">
+        S
+      </div>
+      <div class="hotbar-element">
+        S
+      </div>
+      <div class="hotbar-element">
+        S
+      </div>
+      <div class="hotbar-element">
+        S
+      </div>
+      <div class="hotbar-element">
+        S
+      </div>
+      <div class="hotbar-element">
+        S
+      </div>
+    </div>
+    <div id="controls-help">
+      <p><code>&nbsp;WASD&nbsp;</code> = Movement</p>
+      <p><code>&nbsp;Space&nbsp;</code> = Jetpack</p>
+      <p><code>&nbsp;F&nbsp;</code> = Debug Mode</p>
+      <p><code>&nbsp;R&nbsp;</code> = Reset Position</p>
+    </div>
+    <!-- Including the three.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/controls/PointerLockControls.js"></script>
+
+    <script src="https://unpkg.com/three@0.128.0/examples/js/shaders/CopyShader.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/postprocessing/EffectComposer.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/postprocessing/ShaderPass.js"></script>
+
+    <script src="https://unpkg.com/three@0.128.0/examples/js/shaders/UnpackDepthRGBAShader.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/shaders/DepthLimitedBlurShader.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/shaders/SAOShader.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/postprocessing/SAOPass.js"></script>
+
+    <!-- Including Networking Library -->
+    <script src="https://cdn.socket.io/4.4.0/socket.io.min.js"></script>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
