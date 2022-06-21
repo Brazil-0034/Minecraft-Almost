@@ -15,7 +15,7 @@ canvas {
 #hotbar {
   position: absolute;
   bottom: 10px;
-  text-align: center;
+  text-align: left;
 }
 
 .hotbar-element {

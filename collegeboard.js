@@ -1,8 +1,8 @@
-// THIRD PARTY LIBRARIES USED CREDITED:
+// THIRD PARTY LIBRARIES USED:
 // fastnoiselite library created by Auburn under MIT License
 // Three.JS library created by MrDoob under MIT License
-// No code included in any of these third-party libraries is in any portion of the written create task
-
+// - No collaborators worked on my submission
+// - Each code segment submitted for the written response was written by me
 
 // --->  IMPORTS
 import FastNoiseLite from "/Third Party/FastNoiseLite.js";
@@ -11,7 +11,7 @@ let worldgen = new FastNoiseLite();
 // --->  CONFIGURATION
 
 // the total size of the world (width)
-const worldSize = 500;
+const worldSize = prompt("World Size (Max 1000): ");
 // polygon debug
 const wireframeEnabled = false;
 // world height multiplier
@@ -89,12 +89,8 @@ function predictCollisionAt(x, y, z)
 
 const scene = new THREE.Scene();
 
-let standardWidth = 1920;
-let fovWidthMultiplier = window.innerWidth / standardWidth;
-console.log("Establishing Camera with width multiplier of " + fovWidthMultiplier);
-
 const camera = new THREE.PerspectiveCamera(
-  80 * fovWidthMultiplier,
+  60,
   window.innerWidth / window.innerHeight,
   0.01,
   10000
@@ -240,7 +236,8 @@ function handleBlockPlaceEvent(x, y, z)
 }
 
 // NETWORKING
-const socket = io("https://mcaserver.brazil-0034.repl.co/");
+const socket = io("[Server IP Address Goes Here]"); // Note: The server code is not part of this create task submission. This is only the client.
+
 // --> send to server
 // Client Connect To Server
 socket.on("connect", () => {
@@ -505,13 +502,6 @@ function render() {
   composer.render();
 
   requestAnimationFrame(render);
-}
-
-// when the ESC key is pressed, activate the div element "pause-menu"
-document.onkeydown = function(e) {
-    if (e.key === "Escape") {
-        document.getElementById("pause-menu").style.display = "block";
-    }
 }
 
 render();
