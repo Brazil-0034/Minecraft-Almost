@@ -11,7 +11,7 @@ let worldgen = new FastNoiseLite();
 // --->  CONFIGURATION
 
 // the total size of the world (width)
-const worldSize = 500;
+const worldSize = prompt("Enter the World Size (Weak PC: 100 // Strong PC: 1000)");
 // polygon debug
 const wireframeEnabled = false;
 // world height multiplier
@@ -37,6 +37,8 @@ let debugMode = false;
 let maxPlayerBlocks = 100000;
 
 // --->  WORLD GEN SETUP
+if (worldSize > 1000) worldSize = 1000;
+if (worldSize < 5) worldSize = 5;
 
 let chunkPos = new THREE.Vector2(0, 0);
 
@@ -86,6 +88,7 @@ const scene = new THREE.Scene();
 
 let standardWidth = 1920;
 let fovWidthMultiplier = window.innerWidth / standardWidth;
+if (fovWidthMultiplier.fov < 1) fovWidthMultiplier = 1;
 console.log("Establishing Camera with width multiplier of " + fovWidthMultiplier);
 
 const camera = new THREE.PerspectiveCamera(
